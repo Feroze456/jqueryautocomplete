@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Autocomplete functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+     
+   </head>
+   
+   <body>
+      <!-- HTML --> 
+      <div>
+       
+         <label for = "automplete">Tags: </label>
+         <input id = "automplete">
+      </div>
+   </body>
+    
+     <!-- Javascript -->
+      <script>
+         $(function() {
+            var availableTutorials = [
+               "ActionScript",
+               "Bootstrap",
+               "C",
+               "C++",
+               "Ecommerce",
+               "Jquery",
+               "Groovy",
+               "Java",
+               "JavaScript",
+               "Lua",
+               "Perl",
+               "Ruby",
+               "Scala",
+               "Swing",
+               "XHTML"	
+            ];
+            $( "#automplete" ).autocomplete({
+               source: availableTutorials
+            });
+            $( "#automplete" ).autocomplete("option", "position",
+               { my : "right-0 top+23", at: "right top" }) 
+         });
+      </script>
+    
+</html>

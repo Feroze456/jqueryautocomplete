@@ -1,0 +1,7 @@
+1. what is each function in jquary how do u used in?
+2. what is used of ditach and removing in jquary?
+3. what method chaining in jquary benifit of using it?
+4. what is the use of bind method in jquary?
+5. use of jquary data method?
+6. used of holdready in jquary?
+7. how do u impliment autocomplete in jquary?

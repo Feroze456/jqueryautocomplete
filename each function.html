@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>each demo</title>
+  <style>
+  ul {
+    font-size: 18px;
+    margin: 0;
+  }
+  button {
+    color: blueviolet;
+    cursor: pointer;
+  }
+  .example {
+    font-style: italic;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+    <button>click here to change</button>
+<ul>
+  <li>Eat</li>
+  <li>Sleep</li>
+  <li>Be merry</li>
+</ul>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "li" ).each(function() {
+   alert( $( this ).toggleClass( "example" ));
+  });
+});
+</script>
+  
+</body>
+</html>

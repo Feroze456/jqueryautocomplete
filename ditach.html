@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+    
+      #dvjQuery{
+          
+          color: cadetblue;
+          font-size: 25px;
+      }
+    
+    </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <form>
+    <div id="dvParent">
+   <div id="dvjQuery">jQuery By Example is a good blog to learn jQuery. </div>
+    </div>
+    <br/><br/>
+    <input type='button' id='btnRemove' Value=' Remove ' />
+    <input type='button' id='btnAdd' Value='  Add  ' />
+    <br/><br/>
+</form>
+    </body>
+    
+    
+    <script>
+    
+        $(document).ready(function() {
+    var dvjQuery = null;
+    $('#btnAdd').attr('disabled','disabled');
+    
+    $("#dvjQuery").hover(function() {
+        $(this).addClass('highlight');
+    }, function() {
+        $(this).removeClass('highlight');
+    });
+
+    $('#btnRemove').click(function() {
+        dvjQuery = $("#dvjQuery").remove();
+        $(this).attr('disabled','disabled');
+        $('#btnAdd').removeAttr('disabled');
+    });
+    
+    $('#btnAdd').click(function() {
+        $("#dvParent").html(dvjQuery);
+         $(this).attr('disabled','disabled');
+        $('#btnRemove').removeAttr('disabled');
+    });
+});
+    
+    </script>
+</html>
